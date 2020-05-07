@@ -1,0 +1,13 @@
+import java.util.*
+public class Homework{
+      public static main(String[] args){
+            Scanner console = new Scanner(system.in);
+            System.out.print("Does she do homework? ")
+            String answer = console.nextLine();
+            if (answer == Yes || answer == yes){
+                  System.out.println("Yes");
+            } else {
+                  System.out.println("No");
+            }
+      }
+}

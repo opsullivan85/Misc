@@ -1,0 +1,150 @@
+import java.util.*;
+import java.awt.*;
+
+public class MandelbrotSet {
+    // Graph Display Settings
+    public static final boolean COORDINATE_GRID = false;
+    public static final double X_MIN = -1;
+    public static final double X_MAX = 1;
+    public static final double Y_MIN = -1;
+    public static final double Y_MAX = 1;
+    public static final int SCALE_FACTOR = 500;
+    public static final int WINDOW_LENGTH = (int) (SCALE_FACTOR * (X_MAX - X_MIN));
+    public static final int WINDOW_WIDTH = (int) (SCALE_FACTOR * (Y_MAX - Y_MIN));
+    
+    // Fractal Display Settings
+    public static final boolean JULIA_SET = false;
+    public static final int ITERATIONS = 1020;
+    /* 1 = Red  | 2 = Yellow | 3 = Green | 4 = Cyan |
+     * 5 = Blue | 6 = Violet | 7 = White | */
+    public static final int COLOR = 7;
+    public static final boolean MONOCHROMATIC = true;
+    
+    // Central Function
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        DrawingPanel panel = new DrawingPanel(WINDOW_LENGTH, WINDOW_WIDTH);
+        Graphics g = panel.getGraphics();
+        Complex c = new Complex(0, 0);
+        
+        if (COORDINATE_GRID)
+            drawComplexPlane(panel, g);
+        
+        if (JULIA_SET)
+            c = promptCValue(console, c);
+        
+        drawFractalSet(g, c);
+    }
+    
+    // Prompts for a complex value for c
+    public static Complex promptCValue(Scanner console, Complex c) {
+        System.out.println("Enter a Complex Number for c");
+        System.out.print("Real Part: ");
+        double realPart = console.nextDouble();
+        System.out.print("Imaginary Part: ");
+        double imaginaryPart = console.nextDouble();
+        
+        c = new Complex(realPart, imaginaryPart);
+        System.out.println("c = " + c.toString());
+        
+        return c;
+    }
+    
+    // Draws the complex plane with a real- and imaginary-axis
+    public static void drawComplexPlane(DrawingPanel panel, Graphics g) {
+        g.setColor(Color.GRAY);
+        
+        for (double i = Math.floor(X_MIN); i <= X_MAX; i++)
+            g.drawLine((int) (SCALE_FACTOR * (i - X_MIN)), 0, (int) (SCALE_FACTOR * (i - X_MIN)), WINDOW_WIDTH);
+        
+        for (double i = Math.floor(Y_MIN); i <= Y_MAX; i++)
+            g.drawLine(0, -(int) (SCALE_FACTOR * (i - Y_MIN)) + WINDOW_WIDTH,
+                       WINDOW_LENGTH, -(int) (SCALE_FACTOR * (i - Y_MIN)) + WINDOW_WIDTH);
+        
+        g.setColor(Color.BLACK);
+        g.fillRect(-(int) (SCALE_FACTOR * X_MIN) - 1, 0, 3, WINDOW_WIDTH + 1);
+        g.fillRect(0, (int) (SCALE_FACTOR * Y_MAX), WINDOW_LENGTH + 1, 3);
+    }
+    
+    // Draws a fractal set
+    public static void drawFractalSet(Graphics g, Complex c) {
+        for (int i = (int) (SCALE_FACTOR * X_MIN); i < SCALE_FACTOR * X_MAX; i++) {
+            for (int j = (int) (SCALE_FACTOR * Y_MIN); j < SCALE_FACTOR * Y_MAX; j++) {
+                Double xComplex = (X_MAX - X_MIN) * i / WINDOW_LENGTH;
+                Double yComplex = (Y_MAX - Y_MIN) * j / WINDOW_WIDTH;
+                Complex z = new Complex(xComplex, yComplex);
+                int iteration = iterateFunction(z, c);
+                
+                determineColor(g, iteration);
+                
+                g.fillOval((int) (i - SCALE_FACTOR * X_MIN), (int) (-j + SCALE_FACTOR * Y_MIN + WINDOW_WIDTH), 1, 1);
+            }
+        }
+    }
+    
+    // Determines the iteration at which a point escapes
+    public static int iterateFunction(Complex z, Complex c) {
+        if (!JULIA_SET)
+            c = z;
+        
+        for (int i = 0; i < ITERATIONS; i++) {
+            if (z.abs() > 2)
+                return i;
+            z = z.times(z).plus(c);
+        }
+        
+        return ITERATIONS;
+    }
+    
+    // Determines the color for a point
+    public static void determineColor(Graphics g, int iteration) {
+        if (iteration == ITERATIONS)
+            g.setColor(Color.BLACK);
+        else if (MONOCHROMATIC) {
+            if (COLOR == 1) {
+                Color color = new Color((int) (iteration % 7 * (255 / 7.0)), 0, 0);
+                g.setColor(color);
+            } else if (COLOR == 2) {
+                Color color = new Color((int) (iteration % 7 * (255 / 7.0)),
+                                        (int) (iteration % 7 * (255 / 7.0)), 0);
+                g.setColor(color);
+            } else if (COLOR == 3) {
+                Color color = new Color(0, (int) (iteration % 7 * (255 / 7.0)), 0);
+                g.setColor(color);
+            } else if (COLOR == 4) {
+                Color color = new Color(0, (int) (iteration % 7 * (255 / 7.0)),
+                                        (int) (iteration % 7 * (255 / 7.0)));
+                g.setColor(color);
+            } else if (COLOR == 5) {
+                Color color = new Color(0, 0, (int) (iteration % 7 * (255 / 7.0)));
+                g.setColor(color);
+            } else if (COLOR == 6) {
+                Color color = new Color((int) (iteration % 7 * (255 / 7.0)), 0,
+                                        (int) (iteration % 7 * (255 / 7.0)));
+                g.setColor(color);
+            } else {
+                Color color = new Color((int) (iteration % 7 * (255 / 7.0)),
+                                        (int) (iteration % 7 * (255 / 7.0)),
+                                        (int) (iteration % 7 * (255 / 7.0)));
+                g.setColor(color);
+            }
+        } else {
+            if (iteration == ITERATIONS)
+                g.setColor(Color.BLACK);
+            else if (iteration % 7 == 0)
+                g.setColor(Color.RED);
+            else if (iteration % 7 == 1)
+                g.setColor(Color.ORANGE);
+            else if (iteration % 7 == 2)
+                g.setColor(Color.YELLOW);
+            else if (iteration % 7 == 3)
+                g.setColor(Color.GREEN);
+            else if (iteration % 7 == 4)
+                g.setColor(Color.CYAN);
+            else if (iteration % 7 == 5)
+                g.setColor(Color.BLUE);
+            else if (iteration % 7 == 6)
+                g.setColor(Color.MAGENTA);
+        }
+    }
+}

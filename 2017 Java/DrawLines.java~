@@ -1,0 +1,23 @@
+
+import java.awt.*;
+import java.util.*;
+
+public class DrawLines{
+      
+      public static final int SIZE = 1000
+      
+      public static void main(String[] args){
+            
+            DrawingPanel panel = new DrawingPanel(SIZE, SIZE);
+            Graphics g = panel.getGraphics();
+            Scanner console = new Scanner(System.in);
+            Random rand = new Random();
+            
+            for(int i = 0; i < SIZE; i += 10){
+                  g.drawLine(SIZE, SIZE, 0, SIZE-i);
+                  g.drawLine(0, SIZE, i, 0);
+                  g.drawLine(0, 0, SIZE, i);
+                  g.drawLine(SIZE, 0, SIZE-i, SIZE);
+            }
+      }
+}

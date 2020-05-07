@@ -1,0 +1,14 @@
+class Vowel{
+      public static void main(String[] args){
+            System.out.println(isVowel("a"));
+      }
+      
+      public static boolean isVowel(String string){
+            string = string.toLowerCase();
+            return (string == "a" || string == "e" || string == "i" || string == "o" || string == "u");
+      }
+      
+      public static boolean isNonVowel(String string){
+            return !isVowel(string);
+      }
+}

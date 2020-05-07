@@ -1,0 +1,8 @@
+import java.util.*;
+
+public class GansterName {
+      public static void main(String[] args){
+            scanner console = new console(system.in);
+            
+            str name = console.nextline();
+            

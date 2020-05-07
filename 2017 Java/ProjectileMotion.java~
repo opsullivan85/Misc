@@ -1,0 +1,4 @@
+class ProjectileMotion {
+      public static main(String[] args){
+      }
+}

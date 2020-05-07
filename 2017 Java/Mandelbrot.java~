@@ -1,0 +1,129 @@
+import java.awt.*;
+
+public class Mandelbrot{
+      
+      public static int WIN_SIZE = 1000;
+      public static double ZOOM = 1;
+      public static double REAL = 0;
+      public static double IMAG = 0;
+      public static int MAX_ITER = 1000;
+      
+      public static void main(String[] args){
+            drawMandelbrot(2550);
+      }
+      
+      public static void drawMandelbrot(int maxIter){
+            int width = 15000, height = 15000;
+            double min = -2, max = 2;
+            StdDraw.setCanvasSize(width,height);
+            StdDraw.setXscale(min,max);
+            StdDraw.setYscale(min,max);
+            StdDraw.setPenRadius(0);
+            StdDraw.setPenColor(50, 50, 50);
+            StdDraw.enableDoubleBuffering();
+            Complex coord = new Complex(0, 0);
+            Complex fx = new Complex(0, 0);
+            int iteration = 0;
+            int c = 0;
+            int progress = 1;
+            //double[] ptTmp = new double[]{0.0,0.0};
+            for(double a = min; a <= max; a += (max-min)/width){
+                  for(double b = min; b <= max; b += (max-min)/height){
+                        coord.setCoords(a,b);
+                        fx.setCoords(a,b);
+                        //fx.print();
+                        iteration = 1;
+                        //coord.print();
+                        while(iteration < maxIter && fx.abs() < 2){
+                              //ptTmp[0] = fx.real;
+                              //ptTmp[1] = fx.imag;
+                              fx.squared();
+                              fx.minus(coord);
+                              iteration++;
+                              //StdDraw.line(ptTmp[0], ptTmp[1], fx.real, fx.imag);
+                        }
+                        
+                        if(fx.abs() < 2){
+                              //StdDraw.setPenColor();
+                              StdDraw.setPenColor(255, 255, 255);
+                              StdDraw.point(a, b);
+                        } else{
+                              c = (int)(255.0*Math.log(iteration)/Math.log(maxIter));
+                              //StdDraw.setPenColor(0, 0, c);
+                              StdDraw.setPenColor(255-c, 255-c, 255);
+                              StdDraw.point(a, b);
+                        }
+                        
+                  }
+                  /*
+                  if((int)(100.0*((a-min)/(double)(max-min)))+1 > progress){
+                        progress = (int)(100.0*((a-min)/(double)(max-min)))+1;
+                        System.out.println(progress + "% Complete");
+                  }
+                  */
+                  System.out.println(a);
+            }
+            System.out.println("Processing Image");
+            StdDraw.show();
+            System.out.println("Done");
+            
+      }
+}
+class Complex{
+      double real, imag;
+      
+      public Complex(double real, double imag){
+            this.real = real;
+            this.imag = imag;
+      }
+      
+      public void setCoords(double real, double imag){
+            this.real = real;
+            this.imag = imag;
+      }
+      
+      public void print(){
+            //System.out.printf("%f + %fi\n", this.real, this.imag);
+            System.out.println(this.real + " + " + this.imag + "i");
+      }
+      
+      public void plus(int num){
+            this.real += num;
+      }
+      
+      public void plus(Complex num){
+            this.real += num.real;
+            this.imag += num.imag;
+      }
+      
+      public void minus(int num){
+            this.real -= num;
+      }
+      
+      public void minus(Complex num){
+            this.real -= num.real;
+            this.imag -= num.imag;
+      }
+
+      public void times(int num){
+            this.real *= num;
+            this.imag *= num;
+      }
+      
+      public void times(Complex num){
+            double thisReal = this.real;
+            double numReal = this.real;
+            this.real = (this.real * num.real) - (this.imag * num.imag);
+            this.imag = (this.imag * numReal) + (num.imag * thisReal);
+      }
+      
+      public void squared(){
+            double thisReal = this.real;
+            this.real = (this.real * this.real) - (this.imag * this.imag);
+            this.imag = (this.imag * thisReal) + (this.imag * thisReal);
+      }
+      
+      public double abs(){
+            return(Math.sqrt(this.real * this.real + this.imag * this.imag));
+      }
+}

@@ -1,0 +1,30 @@
+
+import java.awt.*;
+import java.util.*;
+
+public class Static{
+      
+      public static void main(String[] args){
+            
+            DrawingPanel panel = new DrawingPanel(1000, 1000);
+            Graphics g = panel.getGraphics();
+            Scanner console = new Scanner(System.in);
+            Random rand = new Random();
+            Color grey = new Color(0, 0, 0, 0.002f);
+            g.setColor(grey);
+            int count = 0;
+            String reRun = "y";
+            
+            while(reRun.toLowerCase().charAt(0) == 'y'){
+                  panel.clear();
+                  count = 0;
+                  while(count<1000*1000*10){
+                        //g.drawRect(rand.nextInt(1001),rand.nextInt(1001),1,1);
+                        g.drawRect(count%1000,(int)((double)System.currentTimeMillis()%1000),1,1);
+                        count++;
+                  }
+                  System.out.print("Re-Run?");
+                  reRun = console.next();
+            }
+      }
+}

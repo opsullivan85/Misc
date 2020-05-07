@@ -1,0 +1,96 @@
+import java.util.*;
+
+
+class Admit{
+      public static void main(String[] args){
+            Scanner console = new Scanner(System.in);
+            
+            double applicantOne = applicantInfo(console, 1);
+            double applicantTwo = applicantInfo(console, 2);
+            
+            compare(applicantOne, applicantTwo);
+      }
+      
+      public static void compare(double applicantOne, double applicantTwo){
+            System.out.printf("First applicant overall score  = %.1f\n", applicantOne);
+            System.out.printf("Second applicant overall score = %.1f\n", applicantTwo);
+            
+            if(applicantOne > applicantTwo)
+                  System.out.println("The first applicant seems to be better");
+            else
+                  System.out.println("The first applicant seems to be better");
+      }
+      
+      public static double applicantInfo(Scanner console, int applicantNumber){
+            System.out.printf("Information for applicant #%d:\n", applicantNumber);
+            
+            double examScore = getExamScore(console);
+            double gPA = getGPA(console);
+            double overallScore = examScore + gPA;
+            
+            return overallScore;
+      }
+      
+      public static double getGPA(Scanner console){
+            System.out.print("\toverall GPA? ");
+            double overallGPA = console.nextInt();
+            
+            System.out.print("\tmax GPA ");
+            double maxGPA = console.nextInt();
+            
+            System.out.print("\tTranscript Multiplier? ");
+            double transcriptMultiplier = console.nextInt();
+            
+            double gpaScore = ((overallGPA / maxGPA) * 100 * transcriptMultiplier);
+            System.out.printf("\n\tGPA score = %.1f\n", gpaScore);
+            return gpaScore;
+      }
+      
+      public static double getExamScore(Scanner console){
+            System.out.print("\tdo you have 1) SAT scores or 2) ACT scores? ");
+            
+            int testType = console.nextInt();
+            double examScore = 0.0;
+            
+            if(testType == 1){
+                  examScore = getSAT(console);
+            } else{
+                  examScore = getACT(console);
+            }
+            
+            System.out.printf("\texam score = %.1f\n", examScore);
+            return examScore;
+      }
+                  
+      
+      public static double getSAT(Scanner console){
+            System.out.print("\tSAT math? ");
+            int math = console.nextInt();
+            
+            System.out.print("\tSAT critical reading? ");
+            int reading = console.nextInt();
+            
+            System.out.print("\tSAT writing? ");
+            int writing = console.nextInt();
+            
+            double score = (2 * math + reading + writing) / 32;
+            return score;
+      }
+      
+      public static double getACT(Scanner console){
+            System.out.print("\tACT English? ");
+            int english = console.nextInt();
+            
+            System.out.print("\tACT math? ");
+            int math = console.nextInt();
+            
+            System.out.print("\tACT reading? ");
+            int reading = console.nextInt();
+            
+            System.out.print("\tACT science? ");
+            int science = console.nextInt();
+            
+            double score = (english + 2 * math + reading + science) / 1.8;
+            return score;
+      }
+}

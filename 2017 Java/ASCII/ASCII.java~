@@ -1,0 +1,11 @@
+
+
+class ASCII{
+      public static void main(String[] args){
+            char a = 'a';
+            for (int i = 32; i >= 254; i++){
+                  a = (char) i;
+                  System.out.println('a');
+            }
+      }
+}

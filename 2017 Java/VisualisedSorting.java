@@ -1,0 +1,197 @@
+ import java.awt.*;
+import java.util.*;
+
+class VisualisedSorting{
+      
+      public static final int SCREEN_SIZE = 1000;
+      public static final int NUM_BARS = 100;
+      public static final int SLEEP_DURATION = 1;
+      public static final int BAR_SPACING = 1;
+      
+      public static final double BAR_WIDTH = (double)SCREEN_SIZE / NUM_BARS;
+      public static final double BAR_HEIGHT_STEP = (double)(SCREEN_SIZE) / (NUM_BARS+1);
+      public static final double BAR_MIN_HEIGHT = BAR_HEIGHT_STEP;
+      public static final double COLOR_STEP = (double)(255) / (NUM_BARS+1);
+      public static final double COLOR_MIN = COLOR_STEP;
+      
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+      
+      public static void main(String[] args){
+            int[] numSet = new int[NUM_BARS];
+            DrawingPanel panel = new DrawingPanel(SCREEN_SIZE, SCREEN_SIZE);
+            Graphics g = panel.getGraphics();
+            double average = 0;
+            int samples = 10;
+            int iterations;
+            
+            initArry(numSet);
+            System.out.println(Arrays.toString(numSet));
+            drawArry(numSet, panel, g);
+            iterations = run(numSet, panel, g);
+            System.out.println(Arrays.toString(numSet));
+            System.out.println(iterations + " Iterations required.");
+      }
+      
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+      
+      public static int run(int[] arry, DrawingPanel panel, Graphics g){
+            int tempStorage;
+            int count = 0;
+            int numNotSorted = NUM_BARS;
+            boolean sorted = false;
+            while(!sorted){
+                  numNotSorted--;
+                  sorted = true;
+                  //for(int i = 0; i < numNotSorted; i++){
+                  for(int i = 0; i < NUM_BARS-1; i++){
+                        count++;
+                        if(i != NUM_BARS-1){
+                              if(arry[i] > arry[i+1]){
+                                    swapAndRedraw(arry, i, i+1, panel, g);
+                                    panel.sleep(SLEEP_DURATION);
+                                    sorted = false;
+                              }
+                        } else{
+                              if(arry[i] < arry[i-1]){
+                                    swapAndRedraw(arry, i, i-1, panel, g);
+                                    panel.sleep(SLEEP_DURATION);
+                                    sorted = false;
+                              }
+                        }
+                        
+                  }
+            }
+            return count;
+      }
+
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+      
+      public static void swapAndRedraw(int[] arry, int a, int b, DrawingPanel panel, Graphics g){
+            //Swap a & b
+            swap(arry, a, b);
+            
+            //Clear a & b
+            g.setColor(Color.WHITE);
+            g.fillRect((int)(a*BAR_WIDTH), 0, (int)(BAR_WIDTH - BAR_SPACING), SCREEN_SIZE);
+            g.fillRect((int)(b*BAR_WIDTH), 0, (int)(BAR_WIDTH - BAR_SPACING), SCREEN_SIZE);
+            
+            //Redraw a
+            g.setColor(getColor(arry, a));
+            g.fillRect((int)(a*BAR_WIDTH), (int)(SCREEN_SIZE - (BAR_MIN_HEIGHT+arry[a]*BAR_HEIGHT_STEP)), (int)(BAR_WIDTH - BAR_SPACING), SCREEN_SIZE);
+            
+            //Redraw b
+            g.setColor(getColor(arry, b));
+            g.fillRect((int)(b*BAR_WIDTH), (int)(SCREEN_SIZE - (BAR_MIN_HEIGHT+arry[b]*BAR_HEIGHT_STEP)), (int)(BAR_WIDTH - BAR_SPACING), SCREEN_SIZE);
+            
+            //Reset color to black
+            g.setColor(Color.BLACK);
+      }
+      
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+      
+      public static Color getColor(int[] arry, int p){
+            int c = ((int)(COLOR_MIN+(arry[p]*COLOR_STEP)));
+            int ic = (255 - (int)(COLOR_MIN+(arry[p]*COLOR_STEP)));
+            return new Color(ic, c, 0);
+      }
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+      
+      public static void cmplxSwap(int[] arry, int a, int b){
+            int aVal = arry[a];
+            int bVal = arry[b];
+            int dif = aVal - bVal;
+            
+            swap(arry, a, a+2);
+      }
+      
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+      
+      public static void swap(int[] arry, int a, int b){
+            int temp;
+            temp = arry[a];
+            arry[a] = arry[b];
+            arry[b] = temp;
+      }
+      
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+      
+      public static void drawArry(int[] arry, DrawingPanel panel, Graphics g){
+            panel.clear();
+            for(int p = 0; p < NUM_BARS; p++){
+                  g.setColor(getColor(arry, p));
+                  g.fillRect((int)(p*BAR_WIDTH), (int)(SCREEN_SIZE - (BAR_MIN_HEIGHT+arry[p]*BAR_HEIGHT_STEP)), (int)(BAR_WIDTH - BAR_SPACING), SCREEN_SIZE);
+            }
+            g.setColor(Color.BLACK);
+      }
+      
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+   
+      public static void initArry(int[] arry){
+            boolean[] haveNum = new boolean[NUM_BARS];
+            Random rand = new Random();
+            
+            for(int p = 0; p < NUM_BARS; p++){
+                  while(true){
+                        int temp = rand.nextInt(NUM_BARS);
+                        if(!haveNum[temp]){
+                              arry[p] = temp;
+                              haveNum[temp] = true;
+                              break;
+                        }
+                  }
+            }
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
