@@ -1,0 +1,104 @@
+﻿Sau ID,SAUName,SAU SpEd Director Name,SAU Sped Director Email,Phone ,Current contract?
+X,1,Contoocook Valley SAU Office,Ben Moenter,bmoenter@conval.edu    ,924-3336 x2031,Yes
+2,Inter-Lakes Cooperative SAU Office,Elaine Dodge,elaine.dodge@interlakes.org,279-3144,Yes
+X,10,Derry Cooperative SAU Office,"Jayne Boyle, Interim",jboyle@sau10.org,432-1215,Yes
+X,12,Londonderry SAU Office,kim carpinone,kcarpinone@londonderry.org ,432-6920x1113,Yes
+X,13,Tamworth SAU Office,Paul Borsh,pborsh@sau13.org,323-5088,Yes
+X,15,Hooksett SAU Office,Deena Jensen,Djensen@sau15.net,483-2769x226,No
+15,Hooksett SAU Office,kathryn duncan,kduncan@sau15.net,483-2251 x1004,No
+X,15,Hooksett SAU Office,Christine Gialousis,cgialousis@sau15.net,485-5104,Yes
+19,Goffstown SAU Office,Jennifer Dolloff,jennifer.dolloff@sau19.org,497-4818 x5765,Yes
+X,21,Winnacunnet SAU Office,Jessica Parsons,jparsons@sau21.org,926-2539,Yes
+X,23,Haverhill Cooperative SAU Office,jessica piccone-robie,jpiccone-robie@sau23.org,787-2150 x13,Yes
+24,Henniker SAU Office,Sandra Pickering,sandra.pickering@sau24.org,428-3269 x270,Yes
+24,Henniker SAU Office,jacqueline dack,jackie.dack@sau24.org,529-0894,Yes
+25,Bedford SAU Office,kathy mckechnie,mckechiek@sau25.net,472-3755 x2,Yes
+26,Merrimack SAU Office,John Fabrizio,john.fabrizio@sau26.org,424-6211,Yes
+29,Keene SAU Office,Richard Matte,rmatte@sau29.org ,357-9001 x229,Yes
+33,Raymond SAU Office,Scott Riddell,s.riddell@sau33.com,895-4299,Yes
+34,Hillsboro-Deering SAU Office,Patricia Parenteau,pparenteau@hdsd.k12.nh.us ,464-4466 x242,Yes
+35,SAU #35 Office,Patrica eddy (part time),peddy1956@gmail.com,444-3925 x7,Yes
+36,White Mountains Regional SAU Office,Brent Holt,bholt@sau36.org,837-9363,Yes
+37,Manchester SAU Office,Mary Steady,msteady@mansd.org,624-6300 x138,Yes
+41,Hollis-Brookline SAU Office,Amy Rowe,amy.rowe@sau41.org,342-5999,Yes
+43,Newport SAU Office,Cheri Mcdaniel-thomas ,cmcdanielthomas@sau43.org ,865-9500,Yes
+45,Moultonborough SAU Office,Ryan Marsh,rmarsh@sau45.org,476-5969,Yes
+46,Merrimack Valley SAU Office,Judith N. Turk,jturk@aemseagles.org ,735-5494,Yes
+X,48,Plymouth SAU Office,Kim DiSalvo,kdisalvo@pemibaker.org ,536-1254 x21,Yes
+49,Governor Wentworth Regional SAU Office,Susan Merrell,smerrell@sau49.org ,569-5167,Yes
+51,Pittsfield SAU Office,Tobi Gray Chassie,tchassie@pittsfieldnhschools.org,435-6701 x1111,Yes
+53,Pembroke SAU Office,Karen Guercia,kguercia@sau53.org ,485-5187,Yes
+55,Timberlane Regional SAU Office,Susan Rasicot,Susan.Rasicot@sau55.net ,382-6119 x2224,Yes
+57,Salem SAU Office,Margaret Bentley,margaret.bentley@sau57.org ,893-7040,Yes
+65,Kearsarge Regional SAU Office,Larry Elliott,lelliott@kearsarge.org ,526-2051 x1,Yes
+66,Hopkinton SAU Office,Rebecca Forrestall,rforrestall@hopkintonschools.org ,746-5186,Yes
+67,Bow SAU Office,Tamara MacAllister,tmacallister@bownet.org ,224-3095 x310,Yes
+X,70,Hanover SAU Office,Rhett Darak,rhett.darak@sau70.org ,643-6050 x2011,Yes
+73,Gilford SAU Office,Esther Kennedy,ekennedy@sau73.org ,527-9215,Yes
+80,Shaker Regional SAU Office,tonyel mitchell-berry,tmitchell-berry@sau80.org,267-9222 ext. 5306,Yes
+X,83,Fremont SAU Office,melissa mckeon,mmckeon@sau83.org,895-6903x431,Yes
+86,Barnstead SAU Office,Allyson Vignola,avignola@mybes.org,269-5161 x308,Yes
+X,90,Hampton SAU Office,Jessica Parsons,jparsons@sau90.org ,926-8788,Yes
+202,Pinkerton Academy,Richard Sharp,rsharp@pinkertonacademy.org,437-5200x1184,Yes
+3,Berlin SAU Office,Martha Miller,mmiller@sau3.org,752-5068 x1172,No
+4,Newfound Area SAU Office,Anne Holton,aholton@sau4.org,744-5555 x222,No
+5,Oyster River SAU Office,Catherine Plourde,cplourde@orcsd.org,868-5100 x17,No
+6,Claremont SAU Office,Benjamin Nester,bnester@sau6.org,543-4200x6008,No
+7,Colebrook SAU Office,Mandie Hibbard,mhibbard@sau7.org,237-5571 x17,No
+8,Concord SAU Office,Robert Belmont,bbelmont@sau8.org,225-0811 x1034,No
+9,Conway SAU Office,Pam Stimpson,p_stimpson@sau9.org,447-8951,No
+11,Dover SAU Office,Christine Boston,c.boston@dover.k12.nh.us,516-6722,No
+14,Epping SAU Office,Catherine Zylinski,czylinski@sau14.org,679-8003 x103,No
+16,Exeter SAU Office,Helen Rist,hrist@sau16.org,775-8646,No
+16,Exeter SAU Office,salina millora,smillora@sau16.org,772-5413 x105,No
+17,Sanborn Regional SAU Office,jodi gutterman,jgutterman@sau17.org,642-3688x120,No
+X,18,Franklin SAU Office,Rebecca Butt,rbutt@sau18.org,934-3108 x4431,No
+20,Gorham SAU Office,Bonnie Houghton,bonnie.houghton@sau20.org,466-3632 x6,No
+27,Litchfield SAU Office,Devin Bandurski,dbandurski@litchfieldsd.org ,578-3575 x3,No
+28,Pelham SAU Office,Dr. Kim Lessard,klessard@pelhamsd.org,635-1145 x8012,No
+30,Laconia SAU Office,Amy Cammack,acammack@laconiaschools.org ,524-5710 x4012,No
+31,Newmarket SAU Office,Erica MacNeil,macneile@newmarket.k12.nh.us ,292-7989,No
+32,Plainfield SAU Office,Amy Dressler ,adressler@plainfieldschool.org,469-3250,No
+39,Amherst SAU Office,Meg Beauchamp,mbeauchamp@sprise.com ,673-2690 x3,No
+40,Milford SAU Office,Michael J. Hatfield,mhatfield@milfordk12.org ,673-6709,No
+42,Nashua SAU Office,Marcia Bagley,bagleym@nashua.edu,966-1066,No
+44,Northwood SAU Office,Nathaniel Byrne,nbyrne@nhsau44.org ,942-1290,No
+47,Jaffrey-Rindge SAU Office,Jennifer Horne,j.horne@sau47.org,532-8100 x220,No
+50,Greenland SAU Office,Meg Louney,mlouney@sau50.org ,436-4731,No
+50,Greenland SAU Office,Joan Copp,jcopp@sau50.org,431-6723 x305,No
+50,Greenland SAU Office,Sarah Reinhardt,sreinhardt@sau50.org ,422-9572,No
+52,Portsmouth SAU Office,Jeannette Southe,jsouther@sau52.org ,610-4167,No
+54,Rochester SAU Office,Christiane Allison,Allison.c@rochesterschools.com ,332-3678 x216,No
+56,Somersworth SAU Office,Pamela MacDonald,pmacdonald@sau56.org ,692-4450x310,No
+58,Northumberland SAU Office,Michelle Mason,m_mason@sau58.org ,636-2492,No
+59,Winnisquam Regional SAU Office,Lisa Burbach,lburbach@wrsdsau59.org ,286-4116 x108,No
+60,Fall Mountain Regional SAU Office,Donna Jones,djones@sau60.org,826-5762,No
+61,Farmington SAU Office,Diana Denitto,ddenitto@sau61.org ,755-8213,No
+62,Mascoma Valley SAU Office,Christopher Besso,cbesso@mvrsd.org ,632-5563 x3008,No
+63,Wilton SAU Office,Betty Moore,b.moore@sau63.org ,654-8083,No
+64,Milton SAU Office,Melissa Jean,Melissa.Jean@sau64.org ,652-0263 x3,No
+68,Lincoln-Woodstock SAU Office,Nash Reddy,nreddy@lin-wood.org ,745-2214,No
+71,Lempster SAU Office,Betsy Gibbs,bgibbs@sau71.org,863-2420x120,No
+72,Alton SAU Office,Jennifer Katz-Borrin,jkatz-borrin@sau72.org ,875-7500 x9399,No
+74,Barrington SAU Office,Deannah Rae,drae@sau74.org,664-2715,No
+75,Grantham SAU Office,Dan Ferreira,dferreira@sau75.org ,863-9689,No
+76,Lyme SAU Office,Miki McGee,mmcgee@lymeschool.org ,795-2125,No
+77,Monroe SAU Office,teri Gaston,tgaston@monroeschool77.com,638-2800x23,No
+78,Rivendell Interstate SAU Office,janet cole,jcole@rivendellschool.org,353-2170x114,No
+79,Gilmanton SAU Office,nanxy fournier,nfournier@sau79.org,364-5681,No
+81,Hudson SAU Office,Rachel Borge,rborge@sau81.org ,883-7765 x85012,No
+82,Chester SAU Office,Jana Ruiz,ruizj@chesteracademy.org ,887-3621 x404,No
+84,Littleton SAU Office,Kelly Noland,knoland@littletonschools.org ,444-5215 x15,No
+X,85,Sunapee SAU Office,Terra Geer,tgeer@sunapeeschools.org ,269-5161 x308,No
+87,Mascenic Regional SAU Office,Shane Bryant,sbryant@mascenic.org ,,No
+88,Lebanon SAU Office,Tim Koumrian,tkoumrian@sau88.net ,790-8500 x110,No
+89,Mason SAU Office,jonas taub,jtaub@sau89.org,878-2962 x89,No
+92,Hinsdale SAU Office,Julie Fenrich,jfenrich@hnhsd.org,336-5728 x7686,No
+93,Monadnock Regional SAU Office,Catherine Woods,cwoods@mrsd.org,352-6955 x6967,No
+94,Winchester SAU Office,anita mcdowell,amcdowell@wnhsd.org,239-8061 x4,No
+X,95,Windham SAU Office,Kenneth Duesing,kduesing@windhamsd.org ,845-1550 x1131,No
+99,Croydon SAU Office,madelyn burke,mcburke@croydonsd.org,863-2080,No
+101,Wakefield SAU Office,anne kebler ,anne.kebler@sau101.org,871-8502,No
+103,Hill SAU Office,Lauren Rivet,lrivet@sau103.org,,No
+201,Coe-Brown Northwood Academy,Mary susan smith,mssmith@coebrown.org,,No
+301,Prospect Mountain JMA,Justin Carloni,jcarloni@pmhschool.com ,(603) 875-3800 x3166,No
