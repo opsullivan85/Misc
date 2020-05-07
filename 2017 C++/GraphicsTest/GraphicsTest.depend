@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1542288551 source:c:\users\owen\appdata\roaming\codeblocks\projects\other\graphicstest\main.cpp
+	<stdio.h>
+	<math.h>
+

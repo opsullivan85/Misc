@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1527187882 source:c:\users\owen\appdata\roaming\codeblocks\projects\other\ch 13 practice\main.cpp
+	"RightTriangle.h"
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<fstream>
+	<cctype>
+	<cstring>
+	<string>
+
+1526925561 source:c:\users\owen\appdata\roaming\codeblocks\projects\other\ch 13 practice\src\righttriangle.cpp
+	"RightTriangle.h"
+	<cmath>
+
+1526649615 c:\users\owen\appdata\roaming\codeblocks\projects\other\ch 13 practice\include\righttriangle.h
+

@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1527463231 source:c:\users\owen\appdata\roaming\codeblocks\projects\other\ch 11 project\main.cpp
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<fstream>
+	<cctype>
+	<cstring>
+	<string>
+

@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1527789503 source:c:\users\owen\appdata\roaming\codeblocks\projects\other\ch 13 project\main.cpp
+	"Coin.h"
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<fstream>
+	<cctype>
+	<cstring>
+	<string>
+	<ctime>
+
+1528135207 source:c:\users\owen\appdata\roaming\codeblocks\projects\other\ch 13 project\src\coin.cpp
+	"Coin.h"
+	<cstdlib>
+	<ctime>
+
+1527715610 c:\users\owen\appdata\roaming\codeblocks\projects\other\ch 13 project\include\coin.h
+	<iostream>
+

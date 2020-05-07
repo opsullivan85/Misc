@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1526321909 source:c:\users\owen\appdata\roaming\codeblocks\projects\other\ch 10 practice\main.cpp
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	<fstream>
+	<cctype>
+
